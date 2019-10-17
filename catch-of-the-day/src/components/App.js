@@ -81,7 +81,7 @@ class App extends React.Component {
     // 1. Take a copy of state
     const order = { ...this.state.order };
     // 2. Remove that item from order
-    order[key] > 1 ? order[key] = order[key] - 1 : delete order[key];
+    delete order[key];
     // 3. Call setState to update our state object
     this.setState({ order });
   };
